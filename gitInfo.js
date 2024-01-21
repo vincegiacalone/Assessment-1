@@ -11,6 +11,8 @@
 
 //CODE HERE
 
+var gitDefinition = "a version control system that prevents bugs and loss of progress and allows individuals/teams to track changes made to code projects. Git also allows you to view a long history of a project in snapshots"
+
 //////////////////PROBLEM 2////////////////////
 /*
     Create a variable called 'gitHubDefinition'.  
@@ -18,6 +20,8 @@
 */
 
 //CODE HERE
+
+var gitHubDefinition = "A website that can be used by multiple people to collaborate on one coding project. You can push your code to this website to save it in a repository that can be accessed anywhere with internet."
 
 //////////////////PROBLEM 3////////////////////
 /*
@@ -27,6 +31,8 @@
 
 //CODE HERE
 
+var gitInitDefinition = "Initializes a local repository right here in this folder"
+
 //////////////////PROBLEM 4////////////////////
 /*
     Create a variable called 'gitCloneDefinition'.  
@@ -35,6 +41,8 @@
 
 //CODE HERE
 
+var gitCloneDefinition = "a command line that is utilized to target and create a copy of the target repository"
+
 //////////////////PROBLEM 5////////////////////
 /*
     Create a variable called 'gitStatusDefinition'.  
@@ -42,6 +50,8 @@
 */
 
 //CODE HERE
+
+var gitStatusDefinition = "Gives information about the current location's repository, i.e if anything has been modified or not."
 
 //////////////////PROBLEM 6////////////////////
 /*
@@ -54,6 +64,9 @@
 
 //CODE HERE
 
+var gitAddDefinition = "Command that adds files to be tracked/staged."
+var gitAddCode = "git add ."
+
 //////////////////PROBLEM 7////////////////////
 /*
     Create a variable called 'gitCommitDefinition'.  
@@ -65,6 +78,8 @@
 
 //CODE HERE
 
+var gitCommitDefinition = "a command that creates a snapshot of the files you are currently tracking. Essentially saves whatever you're working on (tracking)."
+var gitCommitCode = "git commit -m'initialcommit'"
 
 //////////////////PROBLEM 8////////////////////
 /*
@@ -73,3 +88,5 @@
 */
 
 //CODE HERE
+
+var gitPushDefinition = "a command that sends the staged/tracked code to a repository in github. This is assuming you have created a repository and linked it to that file location."
