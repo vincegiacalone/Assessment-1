@@ -51,6 +51,8 @@ const pinkPrice = .55
 
 // CODE HERE
 
+// I used a for loop to take the length of each acre variable, and add every index up from all 3 to give me the total amount of acres picked!
+
 var totalAcres = 0;
 for (i = 0; i < fujiAcres.length; i++){
     totalAcres += fujiAcres[i];
@@ -63,7 +65,7 @@ for (i = 0; i < galaAcres.length; i++){
 for (i = 0; i < pinkAcres.length; i++){
     totalAcres += pinkAcres[i];
 }
-
+console.log(totalAcres);
 
 
 // PROBLEM 2
@@ -80,9 +82,10 @@ for (i = 0; i < pinkAcres.length; i++){
 
 // CODE HERE
 
-var averageDailyAcres = 0;
+// I took the total acres and devided it by 7, as that is how many days there are in a week. That gave me the average acre count! I could have used the .length of one of the acre lists, but the instructions were pretty lenient ;)
 
-
+var averageDailyAcres = totalAcres / 7;
+console.log(averageDailyAcres);
 
 
 // PROBLEM 3
@@ -119,7 +122,13 @@ let days = 0
 
 // CODE HERE
 
+// I created a while loop that subtracts the average number of acres picked on the daily from acresLeft, while simultaniously adding 1 to the day count for every loop!
 
+while (acresLeft > 0) {
+  acresLeft -= 9
+  days += 1
+}
+console.log (days)
 
 // PROBLEM 4
 
@@ -147,13 +156,27 @@ let days = 0
 
 // CODE HERE
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+// I created 3 seperate for loops, one for each Ton-Array. In each of them i pushed the indexed item (i) multiplied by 6.5 to give us a full array of the daily acre yield of apples!
 
+let fujiTons = [ ];
+let galaTons = [ ];
+let pinkTons = [ ];
 
+for (let i = 0; i < fujiAcres.length; i++){
+    fujiTons.push (fujiAcres[i] * 6.5)
+}
 
+for (let i = 0; i < galaAcres.length; i++){
+    galaTons.push (galaAcres[i] * 6.5)
+}
 
+for (let i = 0; i < pinkAcres.length; i++){
+    pinkTons.push (pinkAcres[i] * 6.5)
+}
+
+console.log(fujiTons);
+console.log(galaTons);
+console.log(pinkTons);
 
 
 // PROBLEM 5
@@ -174,14 +197,27 @@ let days = 0
 
 // CODE HERE 
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+// To achieve the total pounds of each apple, I created a for loop for each array of acres. For every indexed item (i) I multiplied it by 2000 and assigned it to it's respective pound variable.
 
+let fujiPounds = 0;
+let galaPounds = 0;
+let pinkPounds = 0;
 
+for (let i = 0; i < fujiAcres.length; i++){
+    fujiPounds += (fujiAcres[i] * 2000)
+}
 
+for (let i = 0; i < galaAcres.length; i++){
+    galaPounds += (galaAcres[i] * 2000)
+}
 
+for (let i = 0; i < pinkAcres.length; i++){
+    pinkPounds += (pinkAcres[i] * 2000)
+}
 
+console.log(fujiPounds);
+console.log(galaPounds);
+console.log(pinkPounds);
 
 // PROBLEM 6
 
@@ -201,12 +237,15 @@ let days = 0
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+// To get the profit, I took the 3 Pound(s) variables from the above question and multiplied it by how much each of them cost per-pound. For example, I took the number of fuji apple pounds, and multiplied it by .89 to give me the total amount of money I made from fuji apples alone.
 
+let fujiProfit = fujiPounds * .89;
+let galaProfit = galaPounds * .64;
+let pinkProfit = pinkPounds * .55;
 
-
+console.log(fujiProfit);
+console.log(galaProfit);
+console.log(pinkProfit);
 
 
 
@@ -221,3 +260,8 @@ let days = 0
 */
 
 // CODE HERE
+
+// Lastly, I simply added every profit variable into 1 final variable to give us the total amount of money we made off all the apples picked.
+
+totalProfit = fujiProfit + galaProfit + pinkProfit;
+console.log(totalProfit);
